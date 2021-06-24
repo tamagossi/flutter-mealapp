@@ -9,15 +9,22 @@ class MoleculeCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(this.title),
-      padding: const EdgeInsets.all(15),
+      child: Text(
+        this.title,
+        style: Theme.of(context).textTheme.headline3.merge(
+              TextStyle(
+                color: Colors.white,
+              ),
+            ),
+      ),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 18),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          begin: Alignment.bottomRight,
           colors: [
-            this.color.withOpacity(0.7),
+            this.color.withOpacity(0.5),
             this.color,
           ],
         ),
