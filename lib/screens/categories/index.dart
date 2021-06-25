@@ -16,8 +16,9 @@ class MealCategoriesScreen extends StatelessWidget {
         children: MEAL_CATEGORY_DUMMIES
             .map(
               (cat) => MoleculeCategoryItem(
-                title: cat.title,
                 color: cat.color,
+                id: cat.id,
+                title: cat.title,
               ),
             )
             .toList(),
