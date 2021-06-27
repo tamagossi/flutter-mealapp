@@ -27,7 +27,7 @@ class MoleculeCategoryItem extends StatelessWidget {
 
     /* Else */
     // Navigator.of(ctx).pushNamed(
-    //   '/category-meals',
+    //   CategoryMealScreen.routeName,
     //   arguments: {
     //     'category': {
     //       'id': id,

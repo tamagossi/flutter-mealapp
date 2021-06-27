@@ -14,9 +14,10 @@ class MealApp extends StatelessWidget {
     return MaterialApp(
       home: MealCategoriesScreen(),
       title: 'Flutter Demo',
+      initialRoute: MealCategoriesScreen.routeName,
       routes: {
-        '/categories': (ctx) => MealCategoriesScreen(),
-        '/category-meals': (ctx) => CategoryMealScreen(),
+        MealCategoriesScreen.routeName: (ctx) => MealCategoriesScreen(),
+        CategoryMealScreen.routeName: (ctx) => CategoryMealScreen(),
       },
       theme: ThemeData(
         accentColor: Colors.amber,

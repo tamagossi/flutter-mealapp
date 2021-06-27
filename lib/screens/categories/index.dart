@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mealapp/data/meal_category.dart';
+import 'package:mealapp/data/dummy.dart';
 import 'package:mealapp/widgets/molecules/category_item.dart';
 
 class MealCategoriesScreen extends StatelessWidget {
-  const MealCategoriesScreen({Key key}) : super(key: key);
+  static const routeName = '/categories';
 
   @override
   Widget build(BuildContext context) {
