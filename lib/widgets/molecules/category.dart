@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mealapp/screens/categories/meal.dart';
+import 'package:mealapp/screens/categories/meals.dart';
 
 class MoleculeCategoryItem extends StatelessWidget {
   final Color color;
@@ -43,6 +43,7 @@ class MoleculeCategoryItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(15),
       splashColor: Theme.of(context).primaryColor,
       onTap: () => redirectToCategoryMealListScreen(context),
+      // TODO: Later to add image on each category list
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 18),
         child: Text(

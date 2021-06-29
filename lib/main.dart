@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mealapp/configs/colors.dart';
 import 'package:mealapp/screens/categories/index.dart';
-import 'package:mealapp/screens/categories/meal.dart';
+import 'package:mealapp/screens/categories/meals.dart';
 
 void main() {
   runApp(MealApp());
