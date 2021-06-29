@@ -27,6 +27,14 @@ class MealApp extends StatelessWidget {
               bodyText1: GoogleFonts.raleway(
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
+              headline1: GoogleFonts.montserrat(
+                fontSize: 26,
+                fontWeight: FontWeight.w600,
+              ),
+              headline2: GoogleFonts.montserrat(
+                fontSize: 22,
+                fontWeight: FontWeight.w600,
+              ),
               headline3: GoogleFonts.montserrat(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
