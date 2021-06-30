@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mealapp/configs/colors.dart';
 import 'package:mealapp/screens/categories/index.dart';
-import 'package:mealapp/screens/categories/meals.dart';
+import 'package:mealapp/screens/meals/detail.dart';
+import 'package:mealapp/screens/meals/index.dart';
 
 void main() {
   runApp(MealApp());
@@ -11,13 +12,15 @@ void main() {
 class MealApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // TODO: Add implementaion of Cuppertino app
     return MaterialApp(
       home: MealCategoriesScreen(),
       title: 'Flutter Demo',
       initialRoute: MealCategoriesScreen.routeName,
       routes: {
         MealCategoriesScreen.routeName: (ctx) => MealCategoriesScreen(),
-        CategoryMealScreen.routeName: (ctx) => CategoryMealScreen(),
+        MealsScreen.routeName: (ctx) => MealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
       theme: ThemeData(
         accentColor: Colors.amber,
@@ -41,6 +44,10 @@ class MealApp extends StatelessWidget {
               ),
             ),
       ),
+      // onGenerateRoute: (settings) {
+      //   You can use this method everytime you use pushNamed but the screen is not registered in routes.
+      //   You just need to return the screen
+      // },
     );
   }
 }

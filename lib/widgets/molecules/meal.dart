@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mealapp/models/meal.dart';
+import 'package:mealapp/screens/meals/detail.dart';
 import 'package:mealapp/widgets/atoms/meal_info.dart';
 
 class MoleculeMeal extends StatelessWidget {
   final Affordability affordability;
   final Complexity complexity;
   final int duration;
+  final String id;
   final String imageUrl;
   final String title;
 
@@ -13,13 +15,10 @@ class MoleculeMeal extends StatelessWidget {
     @required this.affordability,
     @required this.complexity,
     @required this.duration,
+    @required this.id,
     @required this.imageUrl,
     @required this.title,
   });
-
-  void selectMeal() {
-    print('Hallo mate');
-  }
 
   String get affordabilityText {
     switch (affordability) {
@@ -53,11 +52,19 @@ class MoleculeMeal extends StatelessWidget {
     }
   }
 
+  void viewMealDetail(BuildContext ctx) {
+    Navigator.of(ctx).push(
+      MaterialPageRoute(
+        builder: (_) => MealDetailScreen(id: id),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: InkWell(
-        onTap: selectMeal,
+        onTap: () => viewMealDetail(context),
         child: Card(
           elevation: 4,
           margin: EdgeInsets.all(10),
@@ -83,8 +90,7 @@ class MoleculeMeal extends StatelessWidget {
                   ),
                   Positioned(
                     bottom: 20,
-                    right: 10,
-                    // TODO: Make the container attached to the right
+                    right: 0,
                     child: Container(
                       color: Colors.black54,
                       width: 280,

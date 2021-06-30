@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:mealapp/data/dummy.dart';
 import 'package:mealapp/widgets/molecules/meal.dart';
 
-class CategoryMealScreen extends StatelessWidget {
+class MealsScreen extends StatelessWidget {
   static const routeName = '/category-meals';
   final Map<dynamic, dynamic> category;
 
-  CategoryMealScreen({this.category});
+  MealsScreen({this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,7 @@ class CategoryMealScreen extends StatelessWidget {
             affordability: categoryMeals[index].affordability,
             complexity: categoryMeals[index].complexity,
             duration: categoryMeals[index].duration,
+            id: categoryMeals[index].id,
             imageUrl: categoryMeals[index].imageUrl,
             title: categoryMeals[index].title,
           );
