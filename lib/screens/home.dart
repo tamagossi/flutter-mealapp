@@ -33,18 +33,6 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
           appBar: AppBar(
             title: Text(_screens[_selectedScreen]['title']),
-            // bottom: TabBar(
-            //   tabs: <Widget>[
-            //     Tab(
-            //       icon: Icon(Icons.category),
-            //       text: 'Categories',
-            //     ),
-            //     Tab(
-            //       icon: Icon(Icons.star),
-            //       text: 'Favorite',
-            //     ),
-            //   ],
-            // ),
           ),
           bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.white,
@@ -63,14 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          body: _screens[_selectedScreen]['screen']
-          // body: TabBarView(
-          //   children: <Widget>[
-          //     MealCategoriesScreen(),
-          //     FavoriteScreen(),
-          //   ],
-          // ),
-          ),
+          body: _screens[_selectedScreen]['screen']),
     );
   }
 }
