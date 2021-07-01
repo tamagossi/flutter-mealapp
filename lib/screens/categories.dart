@@ -7,11 +7,8 @@ class MealCategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Categories'),
-      ),
-      body: GridView(
+    return SafeArea(
+      child: GridView(
         padding: EdgeInsets.all(15),
         children: MEAL_CATEGORY_DUMMIES
             .map(

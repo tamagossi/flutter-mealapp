@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mealapp/configs/colors.dart';
-import 'package:mealapp/screens/categories/index.dart';
+import 'package:mealapp/screens/home.dart';
+import 'package:mealapp/screens/categories.dart';
 import 'package:mealapp/screens/meals/detail.dart';
 import 'package:mealapp/screens/meals/index.dart';
 
@@ -14,13 +15,12 @@ class MealApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: Add implementaion of Cuppertino app
     return MaterialApp(
-      home: MealCategoriesScreen(),
+      home: HomeScreen(),
       title: 'Flutter Demo',
-      initialRoute: MealCategoriesScreen.routeName,
       routes: {
         MealCategoriesScreen.routeName: (ctx) => MealCategoriesScreen(),
-        MealsScreen.routeName: (ctx) => MealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        MealsScreen.routeName: (ctx) => MealsScreen(),
       },
       theme: ThemeData(
         accentColor: Colors.amber,
