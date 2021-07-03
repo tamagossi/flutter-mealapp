@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mealapp/configs/colors.dart';
+import 'package:mealapp/screens/filters.dart';
 import 'package:mealapp/screens/home.dart';
 import 'package:mealapp/screens/categories.dart';
 import 'package:mealapp/screens/meals/detail.dart';
@@ -21,6 +22,7 @@ class MealApp extends StatelessWidget {
         MealCategoriesScreen.routeName: (ctx) => MealCategoriesScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
         MealsScreen.routeName: (ctx) => MealsScreen(),
+        FilterScreen.routeName: (ctx) => FilterScreen(),
       },
       theme: ThemeData(
         accentColor: Colors.amber,

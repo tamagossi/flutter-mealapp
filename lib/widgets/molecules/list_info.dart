@@ -25,6 +25,7 @@ class MoleculeListInfo extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: contents
                   .map(
+                    // TODO: Change to the ListTile widget
                     (content) => Padding(
                       padding: const EdgeInsets.all(5),
                       child: Text('⚫   $content'),

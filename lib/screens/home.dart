@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealapp/screens/categories.dart';
 import 'package:mealapp/screens/favorite.dart';
+import 'package:mealapp/widgets/organisms/main_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -31,27 +32,27 @@ class _HomeScreenState extends State<HomeScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-          appBar: AppBar(
-            title: Text(_screens[_selectedScreen]['title']),
-          ),
-          bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Colors.white,
-            currentIndex: _selectedScreen,
-            onTap: _setActiveTab,
-            selectedItemColor: Colors.teal,
-            unselectedItemColor: Colors.black38,
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.category),
-                label: 'Categories',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.star),
-                label: 'Favorite',
-              ),
-            ],
-          ),
-          body: _screens[_selectedScreen]['screen']),
+        appBar: AppBar(title: Text(_screens[_selectedScreen]['title'])),
+        drawer: SafeArea(child: OrganismMainDrawer()),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.white,
+          currentIndex: _selectedScreen,
+          onTap: _setActiveTab,
+          selectedItemColor: Colors.teal,
+          unselectedItemColor: Colors.black38,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.category),
+              label: 'Categories',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.star),
+              label: 'Favorite',
+            ),
+          ],
+        ),
+        body: SafeArea(child: _screens[_selectedScreen]['screen']),
+      ),
     );
   }
 }
